@@ -2,6 +2,7 @@
   <library name="android-support-v4">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/TraceTaxi/libs/android-support-v4.jar!/" />
+      <root url="jar://F:/JAVA/MyApplicationProject/TraceTaxi/libs/android-support-v4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

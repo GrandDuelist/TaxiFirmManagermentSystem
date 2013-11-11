@@ -4,13 +4,17 @@
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
         <option name="GRADLE_PROJECT_PATH" value=":" />
-        <option name="PROJECT_ABSOLUTE_PATH" value="F:\JAVA\MyApplicationProject" />
+        <option name="PROJECT_ABSOLUTE_PATH" value="F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject" />
         <option name="GRADLE_HOME_DIR_PATH" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
+    <content url="file://F:/JAVA/MyApplicationProject">
+      <excludeFolder url="file://F:/JAVA/MyApplicationProject/.gradle" />
+      <excludeFolder url="file://F:/JAVA/MyApplicationProject/build" />
+    </content>
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/build" />

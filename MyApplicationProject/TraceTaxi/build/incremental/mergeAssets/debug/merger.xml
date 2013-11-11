@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="F:\JAVA\MyApplicationProject\TraceTaxi\src\main\assets" />
+        <source path="F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\src\main\assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="F:\JAVA\MyApplicationProject\TraceTaxi\src\debug\assets" />
+        <source path="F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\src\debug\assets" />
     </dataSet>
 
 </merger>

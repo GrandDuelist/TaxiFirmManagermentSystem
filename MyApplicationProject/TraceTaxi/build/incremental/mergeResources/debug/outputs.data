@@ -1,14 +1,14 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1384082543293 210 c41731f5631a90fa989588ef97e9476fc244b438 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\values-v11\values.xml
-1384088528305 2235 f40228da210b4fb36afaf3018480f812d2fa3a78 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\layout\activity_main.xml
-1384082543236 5163 b3852a0d35ff0fca4b26b27176cbe1d698a08be9 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-hdpi\ic_launcher.png
-1384082543290 807 a63497d919943b6d21771f83fe82a4268fee2b5f F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\values\values.xml
-1384088528305 277 43f2d4b1093b9fb185606a3a5077ecc13c7f1221 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\layout\activity_mymap.xml
-1384082543295 130 90e37035f35f83953c491e73e930b7aea297a472 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\values-sw720dp-land\values.xml
-1384082543291 224 3bee0d9a6f0efbaf11495ad45fdeb8f71aee62e8 F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\values-v14\values.xml
-1384082543236 8178 fd3b74240d7a0a64037960a48e46b4a136f29a4d F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-xhdpi\ic_launcher.png
-1384082543235 244 045ff451db7cd8e61285502b8c9bbf7405f2078d F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\menu\main.xml
-1384082543236 16138 81588b7f9bc72b215d74ebc4867c6ea0e30e35ee F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-xxhdpi\ic_launcher.png
-1384082543235 2593 a9be887f1fce76e92a0c2b6447d9efcb7cedd05e F:\JAVA\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-mdpi\ic_launcher.png
+1384082543235 244 045ff451db7cd8e61285502b8c9bbf7405f2078d F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\menu\main.xml
+1384088528305 277 43f2d4b1093b9fb185606a3a5077ecc13c7f1221 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\layout\activity_mymap.xml
+1384082543236 5163 b3852a0d35ff0fca4b26b27176cbe1d698a08be9 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-hdpi\ic_launcher.png
+1384082543290 807 a63497d919943b6d21771f83fe82a4268fee2b5f F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\values\values.xml
+1384082543236 8178 fd3b74240d7a0a64037960a48e46b4a136f29a4d F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-xhdpi\ic_launcher.png
+1384082543235 2593 a9be887f1fce76e92a0c2b6447d9efcb7cedd05e F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-mdpi\ic_launcher.png
+1384082543236 16138 81588b7f9bc72b215d74ebc4867c6ea0e30e35ee F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\drawable-xxhdpi\ic_launcher.png
+1384088528305 2235 f40228da210b4fb36afaf3018480f812d2fa3a78 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\layout\activity_main.xml
+1384082543291 224 3bee0d9a6f0efbaf11495ad45fdeb8f71aee62e8 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\values-v14\values.xml
+1384082543293 210 c41731f5631a90fa989588ef97e9476fc244b438 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\values-v11\values.xml
+1384082543295 130 90e37035f35f83953c491e73e930b7aea297a472 F:\快盘\EF2013\Project\TaxiFirmManagermentSystem\MyApplicationProject\TraceTaxi\build\res\all\debug\values-sw720dp-land\values.xml
