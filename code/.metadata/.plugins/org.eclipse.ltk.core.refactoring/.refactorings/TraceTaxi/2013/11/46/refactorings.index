@@ -1,0 +1,19 @@
+1384263562033	Copy file
+1384263573276	Delete element
+1384263582371	Rename resource 'Copy of AndroidManifest.xml'
+1384264334866	Delete element
+1384282888356	Encapsulate field 'update'
+1384333060248	Rename field 'get_my_location_button'
+1384502293303	Extracts string 'null' into R.string.current_location
+1384502968094	Extracts string 'null' into R.string.clear_mark
+1384503018681	Extracts string 'null' into R.string.clear_map
+1384513679539	Extracts string 'null' into R.string.mark_friend_button
+1384513810657	Extracts string 'null' into R.string.friend_location_button
+1384514224285	Rename field 'button1'
+1384514237287	Rename field 'button2'
+1384514252808	Rename field 'button3'
+1384517207573	Extracts string 'null' into R.string.clear_mark_button
+1384520844044	Extracts string 'null' into R.string.change_to_site
+1384520860257	Extracts string 'null' into R.string.change_to_common
+1384527717232	Extracts string 'null' into R.string.calculate_text
+1384527925805	Encapsulate field 'LastPosition'

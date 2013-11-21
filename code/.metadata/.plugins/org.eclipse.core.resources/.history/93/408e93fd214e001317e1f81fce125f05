@@ -1,0 +1,237 @@
+package com.example.handle;
+
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Handler;
+import android.widget.TextView;
+
+import com.example.tracingtaxi.MainActivity;
+import com.example.tracingtaxi.R;
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+
+public class ListenToMyLocation implements Runnable {
+
+	/*private GoogleMap mMap;
+
+	private LocationClient mLocationClient;*/
+	//添加一个控制器控制屏幕锁定
+	private  boolean LOCKCAMERA = false;
+	
+	
+	private MainActivity activity=null;
+	private PolylineOptions polylineOptions=new PolylineOptions();
+	private CameraUpdate update;
+	private GoogleMap map;
+	private Handler handler;
+	private LatLng LastPosition;
+	private LatLng CurrentFriendLocation=new LatLng(30.28397, 121.20738000000006);
+
+	
+	public float CurrentZoom = 16f;
+	public float MinZoom = 16f;
+	
+	//最前方的点
+	public Marker marker;
+
+	//定义一个整型为好友标记的顺序
+	public int FriendLocationOrder=0;
+	float i=1;
+	Marker mBrisbane;
+	public ListenToMyLocation(MainActivity a,Handler h)
+	{
+		this.activity=a;
+		this.handler=h;
+	
+		
+		marker = this.activity.mMap.addMarker(new MarkerOptions()
+            .title("我的好友")
+        .snippet("姓名：方志晗")
+        .icon(BitmapDescriptorFactory.fromResource(R.drawable.spot2))
+        .infoWindowAnchor(0.5f, 0.5f));
+		
+		
+		}
+		
+	//锁住跟踪视角
+	public void lockCamera()
+	{
+		this.LOCKCAMERA=true;
+		
+	}
+	//锁定视角
+	public void getFriendCamera(LatLng location)
+	{
+		CameraPosition cameraPosition  = new  CameraPosition.Builder().zoom(CurrentZoom).bearing(0)
+                .tilt(0).target(location).build();
+		
+		 setUpdate(CameraUpdateFactory.newCameraPosition(cameraPosition));
+		 this.activity.mMap.moveCamera(update);
+	}
+	//解锁跟踪视角
+	public void unlockCamera()
+	{
+		this.LOCKCAMERA=false;
+		
+	}
+	//得到当前视角的锁定状态
+	public boolean getLock()
+	{
+		return LOCKCAMERA;
+		
+	}
+	
+	//自动定位到我的位置
+	private void onGoToMyLocation()
+	{
+	
+		//if (this.activity.mLocationClient != null && this.activity.mLocationClient.isConnected()&&this.activity.mLocationClient.getLastLocation()!=null) {
+			//map=((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map))
+		     //       .getMap();
+			LatLng location =new LatLng(Math.min(CurrentFriendLocation.latitude+(i+=0.00001),90),
+					    Math.min(CurrentFriendLocation.longitude,180f));
+			//System.out.println(location.latitude+"  "+location.longitude);
+			
+			marker.setPosition(CurrentFriendLocation);
+			//如果屏幕锁定跟踪
+			if(LOCKCAMERA){
+				this.getFriendCamera(location);
+			/*CameraPosition cameraPosition  = new  CameraPosition.Builder().target(location).bearing(0)
+                    .tilt(0).build();
+			
+			 setUpdate(CameraUpdateFactory.newCameraPosition(cameraPosition));
+			 this.activity.mMap.moveCamera(update);*/
+			}else
+			{
+				if(this.activity.cameraChange)
+				{
+					this.CurrentZoom=this.activity.RecordCamera;
+					this.activity.cameraChange=false;
+				}
+			}
+			 
+			
+				
+			polylineOptions.add(location);
+			
+			//上一个点
+			if(getLastPosition()!=null)
+			{
+				
+				
+			
+			 //画线
+			Polyline line = this.activity.mMap.addPolyline(new PolylineOptions().add(getLastPosition())
+		     .add(location)
+		     .width(5)
+		     .color(Color.RED));
+			
+			}else
+			{
+				Polyline line = this.activity.mMap.addPolyline(new PolylineOptions()
+					     .add(location)
+					     .width(5)
+					     .color(Color.RED));
+				
+			}
+			setLastPosition(location);
+			
+		//	System.out.println("success: "+Thread.currentThread().getId());
+		    
+	//	}
+		
+	
+		
+		}
+	
+	@Override
+public void run() {
+	// TODO Auto-generated method stub
+		
+		   this.onGoToMyLocation();
+		   this.handler.postDelayed(this, 100);
+		   
+		  
+	
+}
+
+	//切换视角到好友位置
+	public void goToFriendLocation()
+	{
+		if(getLastPosition()!=null)
+		{
+		 this.getFriendCamera(getLastPosition());
+		 
+		 // Uses a colored icon.
+		   this.activity.mMap.clear();
+		   FriendLocationOrder=0;
+		   
+		   this.activity.mMap.addPolyline(polylineOptions.width(5)
+				     .color(Color.RED));
+		   
+	       mBrisbane = this.activity.mMap.addMarker(new MarkerOptions()
+	                .position(getLastPosition())
+	                .title("好友位置"+FriendLocationOrder++)
+	                .snippet("纬度"+(getLastPosition().latitude)+"经度"+getLastPosition().longitude)
+	                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+		}
+	}
+	
+	//保存当前好友坐标
+		public void markFriendLocation()
+		{
+			if(getLastPosition()!=null)
+			{
+				 this.getFriendCamera(getLastPosition());
+			 
+			 // Uses a colored icon.
+			   
+			   
+		       mBrisbane = this.activity.mMap.addMarker(new MarkerOptions()
+		                .position(getLastPosition())
+		                 .title("好友位置"+FriendLocationOrder++)
+	                .snippet("纬度"+(getLastPosition().latitude)+"经度"+getLastPosition().longitude)
+		                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+			}
+		}
+
+
+	public CameraUpdate getUpdate() {
+		return update;
+	}
+
+
+
+	public void setUpdate(CameraUpdate update) {
+		this.update = update;
+	}
+
+	public void clearMark() {
+		// TODO Auto-generated method stub
+		this.activity.mMap.clear();
+		this.FriendLocationOrder=0;
+		this.activity.mMap.addPolyline(polylineOptions.width(5)
+			     .color(Color.RED));
+		
+	}
+
+	public LatLng getLastPosition() {
+		return LastPosition;
+	}
+
+	public void setLastPosition(LatLng lastPosition) {
+		LastPosition = lastPosition;
+	}
+	
+	
+}

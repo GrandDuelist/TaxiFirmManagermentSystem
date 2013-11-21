@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="CameraLockText">锁定跟踪</string>
+    <string name="CameraUnlockText">解锁跟踪</string>
+    <string name="menuitem_friendlocation">好友位置</string>
+    <string name="menuitem_distance">好友距离</string>
+    <string name="string_friend_location">好友位置</string>
+    <string name="current_location">仅显示当前位置</string>
+    <string name="mark_location">记录当前位置</string>
+    <string name="clear_mark">清除标记</string>
+    <string name="clear_map">清屏</string>
+    <string name="mark_friend_button">标记好友</string>
+    <string name="friend_location_button">好友位置</string>
+    <string name="clear_mark_button">清除标记</string>
+    <string name="exit_out">退出</string>
+
+</resources>

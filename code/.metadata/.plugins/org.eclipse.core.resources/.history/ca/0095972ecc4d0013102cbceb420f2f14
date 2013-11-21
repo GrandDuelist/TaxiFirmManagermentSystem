@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:id="@+id/item_friend_location" android:orderInCategory="1" android:title="@string/menuitem_friendlocation">
+        <menu>
+            <item android:id="@+id/subitem_current" android:title="@string/current_location"/>
+            <item android:id="@+id/mark_item" android:title="@string/mark_location"/>
+        </menu>
+        
+    </item>
+    <item android:id="@+id/item_distance" android:orderInCategory="2" android:title="@string/menuitem_distance"></item>
+    
+
+</menu>

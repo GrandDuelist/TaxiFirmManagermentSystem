@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.Polyline"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="com.example.handle.ListenToMyLocation"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.PolylineOptions"/>
+<fullyQualifiedTypeName name="android.view.MenuInflater"/>
+<fullyQualifiedTypeName name="android.view.MenuItem"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.Marker"/>
+<fullyQualifiedTypeName name="android.widget.GridLayout"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.example.tracingtaxi.MainActivity"/>
+<fullyQualifiedTypeName name="com.example.tracingtaxi.R.id"/>
+<fullyQualifiedTypeName name="com.example.tracingtaxi.R.string"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.GoogleMap.OnCameraChangeListener"/>
+<fullyQualifiedTypeName name="android.widget.ZoomButtonsController.OnZoomListener"/>
+<fullyQualifiedTypeName name="com.example.handle.MathHandle"/>
+<fullyQualifiedTypeName name="android.support.v4.widget.SearchViewCompatIcs.MySearchView"/>
+<fullyQualifiedTypeName name="com.google.android.gms.maps.model.LatLng"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog"/>
+<fullyQualifiedTypeName name="android.app.AlertDialog.Builder"/>
+<fullyQualifiedTypeName name="android.location.Location"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

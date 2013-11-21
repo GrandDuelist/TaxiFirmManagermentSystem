@@ -1,0 +1,12 @@
+package com.example.handle;
+
+import com.google.android.gms.maps.model.LatLng;
+
+public class MathHandle {
+
+	public static float calculateTheDistance(LatLng MyLocation,LatLng FriendLocation)
+	{
+		
+		
+	}
+}
